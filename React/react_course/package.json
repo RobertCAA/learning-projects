@@ -1,0 +1,50 @@
+{
+  "name": "react_course_alv",
+  "version": "1.0.0",
+  "description": "First React Course with Alv",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel ./src/index.html",
+    "format": "prettier --write \"*.{js, jsx, json, css}\"",
+    "lint": "eslint -- fix src/**/*.{js,jsx}"
+  },
+  "author": "Rob",
+  "license": "ISC",
+  "dependencies": {
+    "classnames": "^2.3.1",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.21.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "parcel-bundler": "^1.12.5",
+    "prettier": "^2.7.1"
+  },
+  "externals": {
+    "react": "React"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx}": [
+      "npm run lint"
+    ],
+    "src/**/*.{js, jsx, json, css, scss}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "prettier": {
+    "trailingComma": "all",
+    "singleQuote": true,
+    "semi": true
+  }
+}

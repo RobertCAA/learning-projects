@@ -1,0 +1,58 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.flex-container{
+    display: flex;
+    background-color: #f4f4f4 ;
+    /* Always on the main axis */
+    /* justify-content: end; */
+    /* Always on the cross axis */
+    /* align-items: start; */
+
+    /* flex-wrap: wrap; */
+
+    
+}
+/* 
+.item:nth-of-type(1){
+    order: 2;
+}
+
+.item:nth-of-type(2){
+    order: 3;
+}
+
+.item:nth-of-type(3){
+    order: 1;
+} */
+/* .flex-container::after{
+    content: '';
+    clear: both;
+    display: block;
+} */
+
+.item{
+    /* width: 100px; */
+    /* flex-basis: 300px;  */
+    /* flex-grow: 1; */
+    /* flex-shrink: 3; */
+    /* Same as */
+    /* flex: 1 0 0px; */
+    flex: 1;
+    height: 100px;
+    background-color: #254de4;
+    color: #fff;
+    margin: 10px;
+    float: left;
+    /* Joke: How to center a div */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,22 @@
+{
+  "tasks": [
+    {
+      "id": 2,
+      "text": "Study javascript",
+      "day": "Today",
+      "reminder": false
+    },
+    {
+      "id": 3,
+      "text": "Study CSS",
+      "day": "Tomorrow",
+      "reminder": false
+    },
+    {
+      "text": "Study React even harder",
+      "day": "Now better than ever",
+      "reminder": true,
+      "id": 4
+    }
+  ]
+}
