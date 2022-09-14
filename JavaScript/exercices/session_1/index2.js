@@ -135,35 +135,6 @@ function longestWord(sentence) {
 // ex. chunkArray([1, 2, 3, 4, 5, 6, 7], 2) === [[1, 2],[3, 4],[5, 6],[7]]
 
 function chunkArray(arr = [1, 2, 3, 4, 5, 6, 7], len = 3) {
-  // const splittedArray = [];
-  // // For loop to run through array
-  // for(i = 0; i < arr.length; i++){
-  //   // For loop to divide array in equal chunks
-  //   for(j = 0; j < len; j++){
-  //     let miniArr = []
-  //     miniArr.push(arr[j])
-  //     arr.splice(len)
-  // }
-
-  // for (i = 0; i < arr.length; i + len) {
-  //   for (j = 0; j < len; j++) {
-  //     arr[i] = new Array(arr[j]);
-  //   }
-  // }
-  // for (i = 0; i < arr.length; i + len) {
-  //   for (j = 0; j < len; j++) {
-  //     arr[len * i] = new Array(arr[j]);
-  //   }
-  // }
-
-  // for (i = 0; i < arr.length; i + len) {
-  //   for (j = 0; j < len; j++) {
-  //     arr[i] = new Array(arr[j]);
-  //   }
-  // }
-  // console.log(arr);
-  // return arr;
-
   // Solution array init
   let resultingArr = [];
   // Runs for every position in parameter array
@@ -186,7 +157,10 @@ function chunkArray(arr = [1, 2, 3, 4, 5, 6, 7], len = 3) {
 // Take an array of arrays and flatten to a single array
 // ex. [[1, 2], [3, 4], [5, 6], [7]] = [1, 2, 3, 4, 5, 6, 7]
 
-function flattenArray(arrays) {}
+function flattenArray(array) {
+  // Return result array and uses flat method.
+  return (flatArr = array.flat());
+}
 
 // CHALLENGE 4: ANAGRAM
 // Return true if anagram and false if not
@@ -202,5 +176,5 @@ function isAnagram(str1, str2) {}
 
 function letterChanges(str) {}
 
-const output = chunkArray([1, 2, 3, 4, 5, 6, 7], 3);
+const output = flattenArray([[1, 2, 3], [4, 5, 6], [7]]);
 console.log(output);
