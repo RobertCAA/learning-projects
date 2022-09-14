@@ -164,17 +164,22 @@ function chunkArray(arr = [1, 2, 3, 4, 5, 6, 7], len = 3) {
   // console.log(arr);
   // return arr;
 
-  for (i = 0; i < arr.length; i + len) {
-    // arr[i] = new Array();
+  // Solution array init
+  let resultingArr = [];
+  // Runs for every position in parameter array
+  for (i = 0; i < arr.length; i = i + len) {
+    // Creates small array with 'len' length
     let miniArr = [];
+    // Starts on 'len' index and adds the following positions in array until 'len'
     for (j = i; j < i + len && j < arr.length; j++) {
-      // arr[i] = new Array(arr[j]);
+      // Adds element to small array
       miniArr.push(arr[j]);
     }
-    arr[i] = new Array(miniArr);
+    // Adds small array to solution array
+    resultingArr[i] = new Array(miniArr);
   }
-  console.log(arr);
-  return arr;
+  // Return chunked array
+  return resultingArr;
 }
 
 // CHALLENGE 3: FLATTEN ARRAY
