@@ -135,22 +135,63 @@ function longestWord(sentence) {
 // ex. chunkArray([1, 2, 3, 4, 5, 6, 7], 2) === [[1, 2],[3, 4],[5, 6],[7]]
 
 function chunkArray(arr = [1, 2, 3, 4, 5, 6, 7], len = 3) {
-  // Solution array init
-  let resultingArr = [];
-  // Runs for every position in parameter array
-  for (i = 0; i < arr.length; i = i + len) {
-    // Creates small array with 'len' length
-    let miniArr = [];
-    // Starts on 'len' index and adds the following positions in array until 'len'
-    for (j = i; j < i + len && j < arr.length; j++) {
-      // Adds element to small array
-      miniArr.push(arr[j]);
-    }
-    // Adds small array to solution array
-    resultingArr[i] = new Array(miniArr);
+  // // Solution 1:
+  // // Solution array init
+  // let resultingArr = [];
+  // // Runs for every position in parameter array
+  // for (i = 0; i < arr.length; i = i + len) {
+  //   // Creates small array with 'len' length
+  //   let miniArr = [];
+  //   // Starts on 'len' index and adds the following positions in array until 'len'
+  //   for (j = i; j < i + len && j < arr.length; j++) {
+  //     // Adds element to small array
+  //     miniArr.push(arr[j]);
+  //   }
+  //   // Adds small array to solution array
+  //   resultingArr[i] = new Array(miniArr);
+  // }
+  // // Return chunked array
+  // return resultingArr;
+
+  // Solution 2:
+  // Init chuncked array
+  const chunkedArr = [];
+  // Set index
+  let i = 0;
+  // Loops while index is less than the lenght of the array
+  while (i < arr.length) {
+    // Slice out from the index to the index + the chunk length and push to the array
+    chunkedArr.push(arr.slice(i, i + len));
+    // Increment by chunk length
+    i += len;
   }
-  // Return chunked array
-  return resultingArr;
+  return chunkedArr;
+
+  // // Solution 3:
+  // // Init array
+  // const chunckedArr = [];
+  // // Loop through for each
+  // arr.forEach((value) => {
+  //   // Get last element
+  //   const last = chunckedArr[chunckedArr.length - 1];
+
+  //   // Check if last and if last lenght is equal to the chunk length
+  //   if (!last || last.length === len) {
+  //     console.log("If");
+  //     chunckedArr.push([value]);
+  //   } else {
+  //     console.log("Else");
+  //     last.push(value);
+  //   }
+  //   console.log(chunckedArr);
+  // });
+  // return chunckedArr;
+
+  // const chunked = [];
+  // while (arr.length) {
+  //   chunked.push(arr.splice(0, len));
+  // }
+  // return chunked;
 }
 
 // CHALLENGE 3: FLATTEN ARRAY
