@@ -21,7 +21,7 @@ function runCalc(e) {
   // Do calculations
   // const calculationExample = 'kwehrkwer'
 
-  let solution = chunkArray(dataInput);
+  let solution = addAll(dataInput);
   // console.log(solution);
 
   document.getElementById("output").textContent = solution;

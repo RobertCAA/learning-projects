@@ -208,7 +208,7 @@ function flattenArray(array) {
 // ex. 'elbow' === 'below'
 // ex. 'Dormitory' === 'dirty room##'
 
-function isAnagram(str1, str2) {}
+function isAnagram(str1 = "elbow", str2 = "below") {}
 
 // CHALLENGE 5: LETTER CHANGES
 // Change every letter of the string to the one that follows it and capitalize the vowels
@@ -262,5 +262,5 @@ function letterChanges(str = "hello there") {
   return lettersArr.join("");
 }
 
-const output = letterChanges();
+const output = isAnagram();
 console.log(output);
