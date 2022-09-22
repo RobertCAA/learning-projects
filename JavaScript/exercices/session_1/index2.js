@@ -215,52 +215,11 @@ function isAnagram(str1 = "elbow", str2 = "below") {}
 // Z should turn to A
 // ex. 'hello there' === 'Ifmmp UIfsf'
 
-function letterChanges(str = "hello there") {
-  // Init letters array
-  let lettersArr = [];
-  // Loops through each character of the initial string
-  for (letter of str) {
-    // Converts character into ASCII code after making it lowercase
-    let code = letter.toLowerCase().charCodeAt();
-    // Picks between a letter and a punctuation character
-    switch (code) {
-      // Keeps punctuation ( space, quotes, comma, dot, colon, semicolon, marks)
-      case 32:
-      case 33:
-      case 34:
-      case 39:
-      case 44:
-      case 46:
-      case 58:
-      case 59:
-      case 63:
-      case 96:
-        break;
-      // In all other cases we will add 1 to the ASCII code and process data
-      default:
-        code += 1;
-        switch (code) {
-          // Capitalize bowel cases: a, e, i, o, u
-          case 97:
-          case 101:
-          case 105:
-          case 111:
-          case 117:
-            // 32 is the difference in ascii code between lower and upper cases
-            code = code - 32;
-            break;
-          // 'z' to 'A' case
-          case 122:
-            code = 65;
-            break;
-        }
-    }
-    // Converts ASCII code to a character and pushes it to the array
-    lettersArr.push(String.fromCharCode(code));
-  }
-  // Returns an array from the elements in the array
-  return lettersArr.join("");
-}
+function letterChanges(str) {}
 
+<<<<<<< HEAD
 const output = isAnagram();
+=======
+const output = flattenArray([[1, 2, 3], [4, 5, 6], [7]]);
+>>>>>>> parent of b81757f (Challenge 5: Solved)
 console.log(output);
