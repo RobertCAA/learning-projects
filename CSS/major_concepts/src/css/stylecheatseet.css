@@ -1,0 +1,57 @@
+body {
+  box-sizing: border-box;
+}
+
+.title {
+  color: blue;
+}
+
+.subtitle {
+  color: lightblue;
+}
+
+#contact__h2 {
+  color: green;
+}
+
+/* Set up a style for every a tag after an h2 */
+h2 + a {
+  color: red;
+}
+
+/* General sibling selector. Have to share the same parent and. Every button followed by a text area */
+/* Every button that after or before a text area and have the same parent */
+
+textarea ~ button {
+  color: darkblue;
+}
+
+/* child selector every li inside lu */
+ul > li {
+  color: blue;
+}
+
+/* descendant selector: if it contained (element) in the parent, will apply style */
+ul li {
+  color: purple;
+}
+
+/* Attribute selector */
+h2[class="subtitle"] {
+  color: yellow;
+}
+
+/* Selecting all images that come from that folder. Using '^' ig it is a '$' it ends with the value, * means contains in */
+img[src^="../../img/"] {
+  border: 10px solid black;
+}
+
+/* Whitespace selector */
+h2[class~="article-subtitle"] {
+  background: green;
+}
+
+/* Every h2 that is article-subtitle with a space or dash for example subtitle-25151 */
+h2[class|="article-subtitle"] {
+  background: green;
+}
